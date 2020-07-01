@@ -1,2 +1,2 @@
-# probe_repository
-Este es el repositorio de prueba dedicado a bombas nucleares ;D
+# Códigos
+Scripts para el Trabajo Final de Máster de Productividad y desarrollo personal.
