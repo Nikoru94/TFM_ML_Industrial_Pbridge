@@ -93,7 +93,7 @@ lgbm = lgb.LGBMRegressor(
 
 # ENTRENAMOS EL MODELO
 lgbm.fit(Xtrain, Ytrain,
-          eval_set=[(X_validation, Y_validation)],
+          eval_set=[(Xtrain, Ytrain)],
           eval_metric='l2',
           early_stopping_rounds=5,
           verbose=False)
@@ -118,7 +118,7 @@ print("\nEl valor de MAE es: {:.4f}".format(MAE))
 # REPRESENTACIÓN
 # =============================================================================
 
-plt.plot(np.arange(0,200,1),Y_validation[0:200],'-r',np.arange(0,200,1),Y_predicted[0:200])
+plt.plot(np.arange(0,200,1),Y_validation[0:200],'-r',np.arange(0,200,1),y_pred[0:200])
 plt.legend(['Valores reales','Valores Predichos'])
 plt.ylabel('Energía del CC (MW)')
 plt.xlabel('Nº Datos')
